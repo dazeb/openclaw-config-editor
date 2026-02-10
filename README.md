@@ -1,6 +1,9 @@
+<img width="2816" height="1536" alt="Gemini_Generated_Image_kbrgwmkbrgwmkbrg" src="https://github.com/user-attachments/assets/a42bb6a0-bc83-442c-98db-5576bbd7925c" />
+
 # 🛠️ OpenClaw Config Editor
 
 > **Precision Configuration for the Agentic Era.**
+
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/dazeb/openclaw-config-editor)
 [![License](https://img.shields.io/badge/license-ISC-green.svg)](./LICENSE)
