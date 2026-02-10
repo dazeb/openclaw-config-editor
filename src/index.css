@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #0f1117;
+  --color-bg-panel: #1a1d27;
+  --color-bg-elevated: #22263a;
+  --color-border: #2a2d3e;
+  --color-accent: #00d4d4;
+  --color-accent-dim: #00a3a3;
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0f1117;
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1d27;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2d3e;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00d4d4;
+}
+
+/* Toggle switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #2a2d3e;
+  border-radius: 24px;
+  transition: 0.2s;
+  border: 1px solid #3a3d4e;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #94a3b8;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+input:checked + .toggle-slider {
+  background-color: #00d4d4;
+  border-color: #00d4d4;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+  background-color: #0f1117;
+}
+
+/* Tag chip */
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #22263a;
+  border: 1px solid #2a2d3e;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  color: #e2e8f0;
+}
+
+.tag-chip button {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.tag-chip button:hover {
+  color: #ef4444;
+}
+
+/* JSON preview */
+.json-preview {
+  font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Field states */
+.field-valid input,
+.field-valid select,
+.field-valid textarea {
+  border-color: #22c55e !important;
+}
+
+.field-error input,
+.field-error select,
+.field-error textarea {
+  border-color: #ef4444 !important;
+}
+
+/* Smooth section scroll */
+html {
+  scroll-behavior: smooth;
+}
