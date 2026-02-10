@@ -4,8 +4,11 @@
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/dazeb/openclaw-config-editor)
 [![License](https://img.shields.io/badge/license-ISC-green.svg)](./LICENSE)
+[![macOS Compatible](https://img.shields.io/badge/macOS-✅-blue.svg)](./README.md#-macOS-Specific-Setup)
 
 OpenClaw Config Editor is a high-fidelity Web SPA for managing your `openclaw.json` configuration and `.env` variables. Designed for speed, security, and deep context.
+
+**🍎 macOS Compatible** - Runs locally on your Mac with full Homebrew integration and native file paths.
 
 ---
 
@@ -17,32 +20,56 @@ OpenClaw Config Editor is a high-fidelity Web SPA for managing your `openclaw.js
 - **Security-First**: Smart redaction of sensitive keys and environment variable interpolation.
 - **.env Mastery**: Dedicated environment variable editor with a registry of 25+ known OpenClaw variables.
 - **Draft Persistence**: Auto-saves to local storage so you never lose a session.
+- **Agent Creator**: Multi-agent management with 5 persona templates (Sentinel, Foreman, Code Specialist, Archivist).
+- **Bootstrap Generator**: Auto-generates SOUL.md, IDENTITY.md, MEMORY.md, and TOOLS.md files.
+- **macOS Native**: Full Homebrew integration, native file paths, and Apple Silicon compatibility.
 
 ---
 
 ## 📦 Getting Started
 
+### Prerequisites (macOS)
+
+```bash
+# Install Node.js via Homebrew (recommended)
+brew install node
+
+# Or download from nodejs.org
+# Verify installation
+node --version
+npm --version
+```
+
 ### Installation
 
 ```bash
+# Clone the repository
 git clone https://github.com/dazeb/openclaw-config-editor.git
 cd openclaw-config-editor
+
+# Install dependencies
 npm install
 ```
 
 ### Development
 
 ```bash
+# Start development server
 npm run dev
+
+# Navigate to http://localhost:5173
+# Works in Safari, Chrome, Firefox, and Arc
 ```
-Navigate to `http://localhost:5173`.
 
 ### Production Build
 
 ```bash
+# Build for production
 npm run build
+
+# Static files will be generated in dist/
+# Serve with any web server or open index.html directly
 ```
-Static files will be generated in the `dist/` directory.
 
 ---
 
@@ -50,8 +77,48 @@ Static files will be generated in the `dist/` directory.
 
 1. **Load Config**: Paste your existing `openclaw.json` or start from defaults.
 2. **Edit**: Use the intuitive cards to adjust parameters. Hover or click the `?` for Sentinel guidance.
-3. **Export**: Export your modified config as a JSON file.
-4. **Apply**: Move the file to your OpenClaw root and restart the gateway.
+3. **Create Agents**: Use the "Agents" tab to create multiple agents with different personas.
+4. **Generate Bootstrap**: Download setup scripts that create SOUL.md, IDENTITY.md, and other files.
+5. **Export**: Export your modified config as a JSON file.
+6. **Apply**: Move the file to your OpenClaw root and restart the gateway.
+
+## 🍎 macOS-Specific Setup
+
+### Install Dependencies via Homebrew
+
+```bash
+# Install ChromaDB for memory features
+brew install python3
+pip3 install chromadb
+
+# Install Ollama for local embeddings
+brew install ollama
+ollama pull nomic-embed-text
+
+# Install Docker Desktop (for sandboxing)
+brew install --cask docker
+```
+
+### macOS File Paths
+
+The editor uses these macOS-compatible paths:
+- **OpenClaw workspace**: `~/.openclaw/workspace-<agent-id>`
+- **Agent directory**: `~/.openclaw/agents/<agent-id>/agent`
+- **Config files**: `~/.openclaw/openclaw.json`
+- **Environment files**: `~/.openclaw/.env`
+
+### Bootstrap Setup
+
+```bash
+# Run the generated setup script
+chmod +x setup-<agent-id>.sh
+./setup-<agent-id>.sh
+
+# The script creates:
+# - Workspace directory
+# - All bootstrap files (AGENTS.md, SOUL.md, etc.)
+# - Initializes the agent environment
+```
 
 ---
 
