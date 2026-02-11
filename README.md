@@ -129,6 +129,15 @@ chmod +x setup-<agent-id>.sh
 
 This editor runs entirely in your browser. No configuration data is ever sent to a server. For maximum security, use the `__OPENCLAW_REDACTED__` patterns for sensitive keys.
 
+
+## 🖼️ Screenshots
+<img width="982" height="788" alt="112" src="https://github.com/user-attachments/assets/b7d6d1a5-3f60-4aa9-a6da-a5bacd50f873" />
+
+<img width="976" height="792" alt="rty" src="https://github.com/user-attachments/assets/5fb0ba8a-d82e-4c4d-8bff-6b657bef927a" />
+<img width="983" height="790" alt="Screenshot 2026-02-11 084644" src="https://github.com/user-attachments/assets/a0af8b8f-8b8b-45e9-b1e8-5c141ef96c45" />
+<img width="721" height="766" alt="gtat" src="https://github.com/user-attachments/assets/bf64cd1f-c2b5-4fd3-8cd9-517841b8192d" />
+<img width="722" height="873" alt="Screenshot 2026-02-10 143703" src="https://github.com/user-attachments/assets/a7a8be02-293c-4b77-bff4-40e79d7e9725" />
+
 ---
 
 ## 📜 License
